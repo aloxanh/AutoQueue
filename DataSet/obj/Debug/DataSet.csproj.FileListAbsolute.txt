@@ -31,3 +31,17 @@ D:\01.Development\Son\AutoQueueLCD\DataSet\obj\Debug\DataSet.csproj.GenerateReso
 D:\01.Development\Son\AutoQueueLCD\DataSet\obj\Debug\DataSet.csproj.CoreCompileInputs.cache
 D:\01.Development\Son\AutoQueueLCD\DataSet\obj\Debug\DataSet.dll
 D:\01.Development\Son\AutoQueueLCD\DataSet\obj\Debug\DataSet.pdb
+D:\01.Development\Son\AutoQueue\dll\ezQDB.mdb
+D:\01.Development\Son\AutoQueue\dll\DataSet.dll.config
+D:\01.Development\Son\AutoQueue\dll\DataSet.dll
+D:\01.Development\Son\AutoQueue\dll\DataSet.pdb
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet_MarkupCompile.cache
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet_MarkupCompile.lref
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\Themes\Generic.baml
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.g.resources
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.Properties.Resources.resources
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.csproj.GenerateResource.cache
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.csproj.CoreCompileInputs.cache
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.dll
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.pdb

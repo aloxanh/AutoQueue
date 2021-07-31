@@ -80,5 +80,14 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LogoB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="379393_settings_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

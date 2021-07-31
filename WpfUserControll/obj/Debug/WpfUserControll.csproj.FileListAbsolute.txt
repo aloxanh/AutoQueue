@@ -23,3 +23,16 @@ D:\01.Development\Son\AutoQueueLCD\WpfUserControll\obj\Debug\WpfUserControll.csp
 D:\01.Development\Son\AutoQueueLCD\WpfUserControll\obj\Debug\WpfUserControll.csproj.CoreCompileInputs.cache
 D:\01.Development\Son\AutoQueueLCD\WpfUserControll\obj\Debug\WpfUserControll.dll
 D:\01.Development\Son\AutoQueueLCD\WpfUserControll\obj\Debug\WpfUserControll.pdb
+D:\01.Development\Son\AutoQueue\WpfUserControll\bin\Debug\WpfUserControll.dll
+D:\01.Development\Son\AutoQueue\WpfUserControll\bin\Debug\WpfUserControll.pdb
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\UcWpf.g.cs
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll_MarkupCompile.cache
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll_MarkupCompile.lref
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\UcWpf.baml
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll.g.resources
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll.Properties.Resources.resources
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll.csproj.GenerateResource.cache
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll.csproj.CoreCompileInputs.cache
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll.dll
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll.pdb
+D:\01.Development\Son\AutoQueue\WpfUserControll\obj\Debug\WpfUserControll.csproj.AssemblyReference.cache

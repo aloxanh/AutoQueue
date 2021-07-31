@@ -6,103 +6,175 @@
              xmlns:local="clr-namespace:WpfUserControll"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="gatag1" TargetType="DataGrid">
+            <Setter Property="ColumnHeaderStyle" Value="{DynamicResource ResourceKey=csh1}"></Setter>
+            <Setter Property="CellStyle" Value="{DynamicResource ResourceKey=csh2}"></Setter>
+        </Style>
+        <Style x:Key="csh1" TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#00AF50"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="1.3,1.3,1.3,1.6"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontFamily" Value="Tahoma"    ></Setter>      
+          
+            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        </Style>
+        <Style x:Key="csh2" TargetType="DataGridCell">
+            <Setter Property="Background" Value="#0071C1"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="1,0.5,0.5,1"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontFamily" Value="Tahoma"    ></Setter>
+            <Setter Property="FontWeight" Value="Normal"    ></Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid Background="#0071C1"  >
         <Grid.RowDefinitions >
-            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="80" ></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="16" ></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-         
+            <RowDefinition Height="25" ></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+
+
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Border BorderThickness="2 0 2 2" BorderBrush="Black" >
-                <TextBlock  Text="THÔNG TIN SỐ THỨ TỰ TIẾP KHÁCH HÀNG DỊCH VỤ" Foreground="AliceBlue" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock    HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Label  FontSize="28" Foreground="White" x:Name="wpf_lblCaption" FontFamily="Tahoma">THÔNG TIN SỐ THỨ TỰ TIẾP KHÁCH HÀNG DỊCH VỤ</Label>
+                </TextBlock>
 
             </Border>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="imgLogo"  MouseLeftButtonDown="Grid_MouseLeftButtonDown" Grid.Column="0">
+                   
+                </Image>
+                <StackPanel x:Name="spConfig" Height="40"   Grid.Column="1" Orientation="Horizontal" Margin="5,0,0,0" PreviewMouseLeftButtonDown="StackPanel_PreviewMouseLeftButtonDown">
+                    <Button Width="40" Visibility="Hidden" x:Name="btnConfig" Content=""  >
+                        <Button.Background>
+                            <ImageBrush ImageSource="379393_settings_icon.png"/>
+                        </Button.Background>
+                    </Button>
+                    <!--<Button Width="40">BC</Button>-->
+                    
+                </StackPanel>
+            </Grid>
+           
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition ></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
-                
+                <ColumnDefinition Width="1.5*"></ColumnDefinition>
+
             </Grid.ColumnDefinitions>
             <Border BorderThickness="2 0 2 2" BorderBrush="Black"  >
-                <TextBlock  Text="THỨ TỰ PHỤC VỤ" Foreground="AliceBlue" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock      HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Label x:Name="wpf_lblThuTuPhucVu" Foreground="White" FontFamily="Tahoma" FontSize="20">THỨ TỰ PHỤC VỤ</Label>
+                </TextBlock>
 
             </Border>
             <Border BorderThickness="0 0 2 2" BorderBrush="Black"   Grid.Column="2">
-                
-                <TextBlock x:Name="SOTHUTU1" Padding="12 0 0 0" FontWeight="DemiBold"  Foreground="AliceBlue" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center">
-                   <Span Foreground="Red">0009 0010</Span> 0012 2223 0012 2223 0012 
+
+                <TextBlock x:Name="SOTHUTU1" Padding="12 0 0 0" FontFamily="Tahoma" FontWeight="Bold"  Foreground="AliceBlue" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                   <!--<Span Foreground="Red">0009 0010</Span> 0012 2223 0012 2223 0012-->
+                      <Label Foreground="Red" Name="wpf_lblUuTien"> 0000 </Label> <Label Name="wpf_lblBinhThuong" Foreground="White"> 0000</Label>
+                   
                 </TextBlock>
             </Border>
             <!--<Button Content="THỨ TỰ DỊCH VỤ" FontSize="18"></Button>
             <Button Content="" FontSize="18"  Grid.Column="2"></Button>-->
         </Grid>
         <Grid Grid.Row="2">
-           
+
             <Border BorderThickness="2 0 2 2" BorderBrush="Black"  >
-                <TextBlock x:Name="SOTHUTU2" Padding="12 0 0 0" FontWeight="DemiBold"  Foreground="AliceBlue" FontSize="26" HorizontalAlignment="Left" VerticalAlignment="Center" Uid="abc">
-                   0012 2223 0012 2223 0012
+                <TextBlock  Padding="12 0 0 0" FontWeight="DemiBold"  Foreground="AliceBlue" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Uid="abc" FontFamily="Tahoma">
+                   <Label  Foreground="White" Name="wpf_lblBinhThuong_dong2">0012 2223 0012 2223 0012</Label> 
                 </TextBlock>
             </Border>
         </Grid>
-        <Grid Grid.Row="3" Background="AntiqueWhite">
-            
+        <Grid Grid.Row="3"   Background="AntiqueWhite">
+
         </Grid>
-        <Grid Grid.Row="4">
-            <Border BorderThickness="2 2 2 2" BorderBrush="Black"  >
-                <ListView Name="listviewKH"  Background="#0071C1">
-                    <ListView.View >
+        <Grid Grid.Row="4" >
 
-                        <GridView >
 
-                            <GridViewColumn    DisplayMemberBinding="{Binding CounterId}">
-                                <GridViewColumn.Header  >
-                                    <Border Height="40"  BorderThickness="2 2 2 2" Width="100" Background="#00AF50" BorderBrush="Black"  >
-                                        <TextBlock   VerticalAlignment="Center" HorizontalAlignment="Center">
-                                            ID
-                                        </TextBlock>
-                                    </Border>
-                                </GridViewColumn.Header>
-                            </GridViewColumn>
 
-                            <GridViewColumn Header="ID" Width="100" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
-                            <GridViewColumn Header="CỐ VẤN DỊCH VỤ" Width="300" DisplayMemberBinding="{Binding DisplayName}"></GridViewColumn>
-                            <GridViewColumn Header="SỐ KH CHỜ" Width="200" DisplayMemberBinding="{Binding CustomerWaitingNo}"></GridViewColumn>
-                            <GridViewColumn Header="KHÁCH HÀNG ĐANG PHỤC VỤ" Width="AUTO"  DisplayMemberBinding="{Binding CustomerNo}"></GridViewColumn>
-                            <GridView.ColumnHeaderContainerStyle>
-                                <Style TargetType="GridViewColumnHeader">
-                                    <Setter Property="BorderThickness" Value="1"></Setter>
-                                    <Setter Property="BorderBrush" Value="Green"></Setter>
-                                    <Setter Property="Height" Value="Auto"></Setter>
-                                    <Setter Property="Background">
-                                        <Setter.Value>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                                <GradientStop Offset="0.0" Color="#00AF50" />
-                                                <GradientStop Offset="1.0" Color="#00AF50" />
-                                            </LinearGradientBrush>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Style>
-                            </GridView.ColumnHeaderContainerStyle>
-                        </GridView>
-                        
-                      
-                    </ListView.View>
+            <DataGrid x:Name="listviewKH" Style="{DynamicResource gatag1}"
+                ColumnWidth="*" RowHeight="46" FontSize="15" CanUserSortColumns="False" 
+                Background="#0071C1"  RowBackground="#0071C1" AlternatingRowBackground="#0071C1"
+                GridLinesVisibility="All" ColumnHeaderHeight="50" Foreground="Brown" 
+                CanUserAddRows="False" CanUserDeleteRows="False"
+                CanUserResizeRows="False" CanUserReorderColumns="False"   
+                      AutoGenerateColumns="False"
+                VerticalAlignment="Top" Margin="-7,0,0,0" Grid.ColumnSpan="2"
+            >
+
+                <DataGrid.Columns>
                     
-                    
-                    
-                  
-                </ListView>
-
-             
-
-            </Border>
+                    <DataGridTemplateColumn  Width=".3*" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding CounterId}"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.Header>
+                            <Label Foreground="White" Name="wpf_lblID_header">ID</Label>
+                        </DataGridTemplateColumn.Header>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn   Width="0.7*">
+                        <DataGridTemplateColumn.Header>
+                            <Label Foreground="White" Name="wpf_lblCoVanDV_header">CỐ VẤN DỊCH VỤ</Label>
+                        </DataGridTemplateColumn.Header>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" Margin="6 0 0 0 " HorizontalAlignment="Left" Text="{Binding DisplayName}"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn   Width=".5*">
+                        <DataGridTemplateColumn.Header>
+                            <Label Foreground="White" Name="wpf_lblSoKHCho_header">SỐ KH CHỜ</Label>
+                        </DataGridTemplateColumn.Header>
+                        <DataGridTemplateColumn.CellTemplate>
+                           
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding CustomerWaitingNo}"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn  Width="*">
+                        <DataGridTemplateColumn.Header>
+                            <Label Foreground="White" Name="wpf_lblKHDangPhucVu_header">KHÁCH HÀNG ĐANG PHỤC VỤ</Label>
+                        </DataGridTemplateColumn.Header>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center" Text="{Binding CustomerNo}"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
            
-        </Grid>            
+        </Grid>
+
+        <Grid Grid.Row="6" Height="53" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+
+            <TextBlock FontSize="20" Foreground="White" FontFamily="Tahoma"   >
+             <Label  Foreground="White" Name="wpf_lblFooter1">SỐ</Label>   
+                <Label Name="wpf_lblFooter2" Foreground="Red">MÀU ĐỎ</Label> 
+                <Label  Name="wpf_lblFooter3" Foreground="White">THUỘC KHÁCH HÀNG ƯU TIÊN (Khách hàng hẹn trước và đến đúng hẹn)</Label> 
+            </TextBlock>
+
+        </Grid>
+
 
 
 
