@@ -21,8 +21,11 @@
           
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
         </Style>
-        <Style x:Key="csh2" TargetType="DataGridCell">
-            <Setter Property="Background" Value="#0071C1"></Setter>
+        <Style x:Key="csh2" x:Name="bgDataGridCell" TargetType="DataGridCell">
+            
+
+            <Setter  Property="Background" Value="{DynamicResource BackgroundColor}"></Setter>
+            <!--<Setter  Property="Background" Value="#0071C1"></Setter>-->
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="BorderBrush" Value="Black"></Setter>
             <Setter Property="BorderThickness" Value="1,0.5,0.5,1"></Setter>
@@ -31,7 +34,7 @@
             <Setter Property="FontWeight" Value="Normal"    ></Setter>
         </Style>
     </UserControl.Resources>
-    <Grid Background="#0071C1"  >
+    <Grid Background="#0071C1" Name="wpf_grid_main" >
         <Grid.RowDefinitions >
             <RowDefinition Height="80" ></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
@@ -57,11 +60,12 @@
                 <Image x:Name="imgLogo"  MouseLeftButtonDown="Grid_MouseLeftButtonDown" Grid.Column="0">
                    
                 </Image>
-                <StackPanel x:Name="spConfig" Height="40"   Grid.Column="1" Orientation="Horizontal" Margin="5,0,0,0" PreviewMouseLeftButtonDown="StackPanel_PreviewMouseLeftButtonDown">
-                    <Button Width="40" Visibility="Hidden" x:Name="btnConfig" Content=""  >
-                        <Button.Background>
-                            <ImageBrush ImageSource="379393_settings_icon.png"/>
+                <StackPanel  x:Name="spConfig" Height="40"   Grid.Column="1" Orientation="Horizontal" Margin="5,0,0,0" PreviewMouseLeftButtonDown="StackPanel_PreviewMouseLeftButtonDown">
+                    <Button Opacity="30"  Width="40" Visibility="Hidden" x:Name="btnConfig" Content=""  >
+                        <Button.Background >
+                            <ImageBrush  ImageSource="379393_settings_icon.png"/>
                         </Button.Background>
+                        
                     </Button>
                     <!--<Button Width="40">BC</Button>-->
                     

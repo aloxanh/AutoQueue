@@ -24,9 +24,11 @@ namespace WpfUserControll
         public Image imageLogo;
         public  bool showhide = false;
         public Button btnConfig_wpf;
+        public Grid grid_main;
         public Label lblUuTien, lblBinhThuong, lblBinhThuong_dong2,lblCaption,
             lblThuTuPhucVu, lblID_header, lblCoVanDV_header, lblSoKHCho_header,
             lblKHDangPhucVu_header, lblFooter1, lblFooter2, lblFooter3;
+        
         public UcWpf()
         {
             InitializeComponent();
@@ -45,14 +47,20 @@ namespace WpfUserControll
             lblFooter1 = this.wpf_lblFooter1;//
             lblFooter2 = this.wpf_lblFooter2;//
             lblFooter3 = this.wpf_lblFooter3;//
+            grid_main = this.wpf_grid_main;//
 
+
+
+
+         //   this.Resources["BackgroundColor"] = lsviewKH.Background;// new SolidColorBrush(Colors.Red);
 
         }
+
 
         public void ShowHidePanel()
         {
             showhide = !showhide;
-            btnConfig.Visibility = showhide? Visibility.Hidden: Visibility.Visible;
+            btnConfig.Visibility = showhide? Visibility.Visible : Visibility.Hidden;
         }
 
         private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -70,4 +78,5 @@ namespace WpfUserControll
         //    MessageBox.Show("ABCssss");
         //}
     }
+    
 }

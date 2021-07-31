@@ -45,3 +45,4 @@ D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.csproj.GenerateResourc
 D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.csproj.CoreCompileInputs.cache
 D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.dll
 D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.pdb
+D:\01.Development\Son\AutoQueue\DataSet\obj\Debug\DataSet.csproj.AssemblyReference.cache
