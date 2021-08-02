@@ -12,7 +12,7 @@
             <Setter Property="CellStyle" Value="{DynamicResource ResourceKey=csh2}"></Setter>
         </Style>
         <Style x:Key="csh1" TargetType="DataGridColumnHeader">
-            <Setter Property="Background" Value="#00AF50"></Setter>
+            <Setter Property="Background" Value="{DynamicResource BackgroundColorHeader}"></Setter>
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="BorderBrush" Value="Black"></Setter>
             <Setter Property="BorderThickness" Value="1.3,1.3,1.3,1.6"></Setter>
